@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Rincón · Página personal de Ana</title>
+  <meta name="description" content="Página personal de ejemplo: quién soy, mis proyectos y cómo contactarme.">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ============ CABECERA Y MENÚ ============ -->
+  <header class="cabecera">
+    <a class="logo" href="#inicio">🌿 Mi Rincón</a>
+
+    <button class="menu-boton" id="menuBoton" aria-expanded="false" aria-controls="menu">
+      <span aria-hidden="true">☰</span>
+      <span class="solo-lectores">Abrir menú</span>
+    </button>
+
+    <nav class="menu" id="menu">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+      <button class="boton-tema" id="botonTema" aria-pressed="false">
+        <span id="iconoTema" aria-hidden="true">🌙</span>
+        <span id="textoTema">Modo oscuro</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ PRESENTACIÓN ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero-texto">
+        <p class="saludo">¡Hola! Soy</p>
+        <h1>Ana Pérez</h1>
+        <p class="lema">Aprendiendo a crear cosas bonitas y útiles en la web. Un párrafo, una idea y muchas ganas.</p>
+        <a class="boton" href="#proyectos">Ver mis proyectos</a>
+      </div>
+
+      <img class="hero-avatar" src="avatar.svg" alt="Ilustración de una flor con ojos sonrientes" width="200" height="200">
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="seccion" id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        Estudio, leo y, desde hace poco, programo. Empecé con una página como esta: sin saber nada,
+        copiando y probando. Ahora sé que una web son tres piezas que encajan: el <strong>HTML</strong>
+        dice qué hay, el <strong>CSS</strong> cómo se ve y el <strong>JavaScript</strong> qué hace.
+      </p>
+      <ul class="habilidades">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Curiosidad</li>
+      </ul>
+    </section>
+
+    <!-- ============ PROYECTOS ============ -->
+    <section class="seccion" id="proyectos">
+      <h2>Mis proyectos</h2>
+      <div class="tarjetas">
+
+        <article class="tarjeta">
+          <span class="etiqueta">HTML</span>
+          <h3>Mi primera página</h3>
+          <p>Estructura, títulos, listas y enlaces. La base de todo lo demás.</p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="etiqueta">CSS</span>
+          <h3>Colores y cajas</h3>
+          <p>Selectores, márgenes, bordes y flexbox para colocar las cosas en su sitio.</p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="etiqueta">JavaScript</span>
+          <h3>Modo oscuro</h3>
+          <p>Un botón que cambia el tema de la página y lo recuerda al volver.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="seccion" id="contacto">
+      <h2>Escríbeme</h2>
+      <p class="ayuda">Este formulario no envía nada a ningún sitio: valida los datos y muestra un mensaje. Es un ejercicio.</p>
+
+      <form class="formulario" id="formulario" novalidate>
+        <label for="nombre">Tu nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Ana" autocomplete="name">
+
+        <label for="email">Tu correo</label>
+        <input id="email" name="email" type="email" placeholder="ana@ejemplo.com" autocomplete="email">
+
+        <label for="mensaje">Tu mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Hola Ana, quería decirte…"></textarea>
+
+        <button class="boton" type="submit">Enviar mensaje</button>
+        <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="pie">
+    <p>© <span id="anio">2025</span> Ana Pérez · Hecho con HTML, CSS y JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
